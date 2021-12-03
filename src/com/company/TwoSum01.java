@@ -30,8 +30,6 @@ public class TwoSum01 {
      * 4. 因为如果不存在的话，我们会把当前的数字的值作为key，然后index作为value进行存储。
      * 所以在步骤三种，我们就可以直接使用map.get[resultNum]获取到对应的另一个的index
      *
-     * @param nums
-     * @param target
      * @return
      */
 
@@ -41,7 +39,7 @@ public class TwoSum01 {
         int target = 9;
         int[] array = new int[]{2, 11, 10, 97,7};
 
-        int[] findNumsResult = calculateTwoSum(array, target);
+        int[] findNumsResult = getTwoSum(target, array);
 
         for (int i = 0; i < findNumsResult.length; i++) {
             System.out.println("num:" + findNumsResult[i]);
@@ -62,6 +60,23 @@ public class TwoSum01 {
                 return new int[]{map.get(resultNum), i};
             } else {
                 map.put(nums[i], i);
+            }
+        }
+        return null;
+    }
+
+
+    public static int[] getTwoSum(int target, int[] arrays) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arrays.length; i++) {
+            int current = arrays[i];
+            int diff = target - current;
+
+            if (map.containsKey(diff)) {
+                return new int[]{map.get(diff), i};
+            } else {
+                map.put(current, i);
             }
         }
         return null;
