@@ -34,6 +34,7 @@ public class OrderTree {
         List<String> preStrings = preOrder(node3);
         System.out.println("先序遍历: " + preStrings);
 
+
         nonRecursionPreOrder(node3);
 
         List<String> middleStrings = middleOrder(node3);
@@ -88,7 +89,7 @@ public class OrderTree {
 
     }
 
-    // 前序遍历的非递归实现
+    // 中序遍历的非递归实现
     //https://blog.csdn.net/My_Jobs/article/details/43451187
     public static void nonRecursionMiddleOrder(TreeNode node) {
         // 1. 打印出当前传入的节点的值

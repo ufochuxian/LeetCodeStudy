@@ -37,7 +37,8 @@ public class ListNodeReverse {
             //head.getNext() = null的情况，也就是到最后一个节点的时候，就直接返回最后一个节点，进行递归就好了
             return head;
         }
-        //获取到"当前节点" （这里会多次调用，因为下面递归调用执行了reverseNode方法）
+        //获取到
+        //"当前节点" （这里会多次调用，因为下面递归调用执行了reverseNode方法）
         Node curNode = head.getNext();
         //获取反转之后的头节点
         Node reverseNode = reverseNode(curNode);
