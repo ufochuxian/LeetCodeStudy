@@ -72,7 +72,7 @@ public class TwoSum01 {
         for (int i = 0; i < arrays.length; i++) {
             int current = arrays[i];
             int diff = target - current;
-
+    
             if (map.containsKey(diff)) {
                 return new int[]{map.get(diff), i};
             } else {

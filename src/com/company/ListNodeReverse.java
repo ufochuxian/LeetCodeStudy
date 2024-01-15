@@ -32,7 +32,7 @@ public class ListNodeReverse {
      * @return
      */
     public static Node reverseNode(Node head) {
-        //空节点的情况下，直接返回这个节点
+        //空节点的情况下，直接返回这个节点Parcel
         if (head == null || head.getNext() == null) {
             //head.getNext() = null的情况，也就是到最后一个节点的时候，就直接返回最后一个节点，进行递归就好了
             return head;

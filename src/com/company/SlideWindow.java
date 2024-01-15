@@ -24,7 +24,11 @@ class SlideWindow {
         }
 
         if (Arrays.equals(sCount, pCount)) {
+            //
+
             ans.add(0);
+
+
         }
 
         for (int i = 0; i < sLen - pLen; ++i) {
